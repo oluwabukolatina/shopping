@@ -5,22 +5,23 @@ import helmet from 'helmet';
 import compression from 'compression';
 import morgan from 'morgan';
 import morganBody from 'morgan-body';
-import BasketRoute from './basket/basket.route';
+import BasketRoute from './component/basket/basket.route';
 import welcomeMessage from '../welcome';
 import notFoundMiddleware from '../not-found.middleware';
 import errorMiddleware from '../error.middleware';
+import ProductRoute from './component/product/product.route';
 
 dotenv.config();
 
 class App {
   public app: express.Application;
 
-  public miscellaneousRoute: BasketRoute = new BasketRoute();
+  public productRoute: ProductRoute = new ProductRoute();
 
   constructor() {
     this.app = express();
     this.config();
-    this.miscellaneousRoute.routes(this.app);
+    this.productRoute.routes(this.app);
     this.app.disable('x-powered-by');
     this.app.set('trust proxy', true);
     this.app.get('/', welcomeMessage);

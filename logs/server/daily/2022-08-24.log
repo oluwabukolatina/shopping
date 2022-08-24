@@ -1,1 +1,23 @@
 [34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 15:42:08] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 15:58:25] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:02:17] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:02:22] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:03:03] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:03:37] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:03:47] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:04:15] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:04:30] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:05:07] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:37:47] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:39:54] Label🏷️ 
+[31merror[39m: 	[31mBODY- {}, STATUS - 404, MESSAGE - /api/v1/made-with-love/product does not exist, URL - /api/v1/made-with-love/product, METHOD - POST, IP - ::1[39m -- ⏰ [24/08/2022, 16:40:04] Label🏷️ 
+[31merror[39m: 	[31mBODY- {}, STATUS - 404, MESSAGE - /api/v1/made-with-love/product does not exist, URL - /api/v1/made-with-love/product, METHOD - POST, IP - ::1[39m -- ⏰ [24/08/2022, 16:40:13] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:40:26] Label🏷️ 
+[31merror[39m: 	[31mBODY- {}, STATUS - 404, MESSAGE - /api/v1/made-with-love/product does not exist, URL - /api/v1/made-with-love/product, METHOD - POST, IP - ::1[39m -- ⏰ [24/08/2022, 16:40:28] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:41:12] Label🏷️ 
+[31merror[39m: 	[31mBODY- {}, STATUS - 404, MESSAGE - /api/v1/made-with-love/product does not exist, URL - /api/v1/made-with-love/product, METHOD - POST, IP - ::1[39m -- ⏰ [24/08/2022, 16:41:14] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:42:07] Label🏷️ 
+[31merror[39m: 	[31mBODY- {}, STATUS - 404, MESSAGE - /api/v1/made-with-love/product does not exist, URL - /api/v1/made-with-love/product, METHOD - POST, IP - ::1[39m -- ⏰ [24/08/2022, 16:42:11] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:45:37] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:45:48] Label🏷️ 
+[34minfo[39m: 	[34mServer started at 5090 on development[39m -- ⏰ [24/08/2022, 16:46:46] Label🏷️ 
