@@ -15,13 +15,13 @@ dotenv.config();
 
 class App {
   public app: express.Application;
-
   public productRoute: ProductRoute = new ProductRoute();
-
+  public basketRoute: BasketRoute = new BasketRoute();
   constructor() {
     this.app = express();
     this.config();
     this.productRoute.routes(this.app);
+    this.basketRoute.routes(this.app);
     this.app.disable('x-powered-by');
     this.app.set('trust proxy', true);
     this.app.get('/', welcomeMessage);

@@ -11,8 +11,9 @@ class BasketRoute {
       .route(BASKET_URL)
       .post(
         BasketValidation.validateAddToBasket,
-        this.basketController.addToCheckout,
+        this.basketController.addToBasket,
       );
+    app.route(BASKET_URL).get(this.basketController.getAllInBasket);
   };
 }
 export default BasketRoute;

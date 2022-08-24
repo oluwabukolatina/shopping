@@ -44,10 +44,10 @@ class ResponseHandler {
       .json({ status: true, message: SharedHelper.titleCase(message), data });
   }
 
-  static CreatedResponse(res: Response, message = '', data: any) {
+  static CreatedResponse(res: Response, message = '', ) {
     return res
       .status(StatusCodes.CREATED)
-      .json({ message: SharedHelper.titleCase(message), status: true, data });
+      .json({ message: SharedHelper.titleCase(message), status: true,  });
   }
 
   static ServerErrorResponse(

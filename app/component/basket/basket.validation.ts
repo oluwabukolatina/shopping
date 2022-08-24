@@ -9,7 +9,7 @@ const BasketValidation = {
     next: NextFunction,
   ) {
     const schema = Joi.object({
-      name: Joi.string().label('User Id').required(),
+      name: Joi.string().label('product name').required(),
     });
     await AppValidation.bodyBaseValidator(schema, request, response, next);
   },
