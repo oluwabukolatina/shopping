@@ -1,6 +1,6 @@
 import { Application } from 'express';
 import BasketController from './basket.controller';
-import { BASKET_URL } from '../../../shared.url';
+import { BASKET_URL } from '../../shared.url';
 import BasketValidation from './basket.validation';
 import BasketMiddleware from './basket.middleware';
 

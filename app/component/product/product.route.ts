@@ -1,6 +1,6 @@
 import { Application } from 'express';
 import ProductController from './product.controller';
-import { PRODUCT_URL } from '../../../shared.url';
+import { PRODUCT_URL } from '../../shared.url';
 
 class ProductRoute {
   public productController: ProductController = new ProductController();

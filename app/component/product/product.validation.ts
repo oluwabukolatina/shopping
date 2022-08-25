@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
-import AppValidation from '../../../app.validation';
+import AppValidation from '../../app.validation';
 
 const ProductValidation = {
   async validateAddToBasket(

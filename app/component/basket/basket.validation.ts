@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
 import { StatusCodes } from 'http-status-codes';
-import AppValidation from '../../../app.validation';
-import HttpException from '../../../http-exception';
+import AppValidation from '../../app.validation';
+import HttpException from '../../http-exception';
 
 const BasketValidation = {
   async validateAddToBasket(

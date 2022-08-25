@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import fs from 'fs';
 import { StatusCodes } from 'http-status-codes';
-import HttpException from '../../../http-exception';
+import HttpException from '../../http-exception';
 
 const BasketMiddleware = {
   async checkIfProductToBeDeletedIsInBasket(

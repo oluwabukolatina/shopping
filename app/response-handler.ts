@@ -1,7 +1,7 @@
 import { NextFunction, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import HttpException from "./http-exception";
-import SharedHelper from "./shared-helper";
+import HttpException from './http-exception';
+import SharedHelper from './shared-helper';
 
 class ResponseHandler {
   static HttpExceptionResponse(
@@ -44,10 +44,10 @@ class ResponseHandler {
       .json({ status: true, message: SharedHelper.titleCase(message), data });
   }
 
-  static CreatedResponse(res: Response, message = '', ) {
+  static CreatedResponse(res: Response, message = '') {
     return res
       .status(StatusCodes.CREATED)
-      .json({ message: SharedHelper.titleCase(message), status: true,  });
+      .json({ message: SharedHelper.titleCase(message), status: true });
   }
 
   static ServerErrorResponse(

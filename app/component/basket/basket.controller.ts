@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import fs from 'fs';
 import { StatusCodes } from 'http-status-codes';
-import ResponseHandler from '../../../response-handler';
+import ResponseHandler from '../../response-handler';
 import ProductData from '../../../products.json';
 
 class BasketController {
@@ -27,7 +27,7 @@ class BasketController {
   };
 
   public getAllInBasket = async (
-    { body }: Request,
+   request: Request,
     response: Response,
     next: NextFunction,
   ) => {
@@ -71,7 +71,7 @@ class BasketController {
   };
 
   public getAbandonedItemsInBasket = async (
-    { params }: Request,
+  request: Request,
     response: Response,
     next: NextFunction,
   ) => {

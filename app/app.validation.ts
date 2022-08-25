@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import HttpException from "./http-exception";
-import SharedHelper from "./shared-helper";
+import HttpException from './http-exception';
+import SharedHelper from './shared-helper';
 
 const AppValidation = {
   /**
@@ -29,6 +29,5 @@ const AppValidation = {
       );
     }
   },
-
 };
 export default AppValidation;

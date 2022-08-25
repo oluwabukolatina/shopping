@@ -1,5 +1,5 @@
 import app from './app';
-import logger from '../logger';
+import logger from './logger';
 import { ENVIRONMENT } from './config/secrets';
 
 if (!process.env.PORT) {

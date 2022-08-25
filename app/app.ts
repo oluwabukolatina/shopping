@@ -6,9 +6,9 @@ import compression from 'compression';
 import morgan from 'morgan';
 import morganBody from 'morgan-body';
 import BasketRoute from './component/basket/basket.route';
-import welcomeMessage from '../welcome';
-import notFoundMiddleware from '../not-found.middleware';
-import errorMiddleware from '../error.middleware';
+import welcomeMessage from './welcome';
+import notFoundMiddleware from './middleware/not-found.middleware';
+import errorMiddleware from './middleware/error.middleware';
 import ProductRoute from './component/product/product.route';
 
 dotenv.config();
