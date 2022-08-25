@@ -4,11 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "tsc && npm run copy-static-assets",
+        "build": "tsc",
         "build-ts": "tsc",
         "debug-build": "npm run build && npm run start",
         "cont-int": "npm run test && npm run-script lint",
-        "copy-static-assets": "ts-node copyStaticAssets.ts",
         "dev": "nodemon --ignore '*.json' app/server.ts",
         "test": "jest --detectOpenHandles --forceExit --verbose",
         "watch-test": "jest --watchAll --detectOpenHandles --forceExit --coverage --verbose",
