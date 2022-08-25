@@ -22,6 +22,10 @@ class BasketRoute {
         this.basketController.addToBasket,
       );
     app.route(BASKET_URL).get(this.basketController.getAllInBasket);
+
+    app
+      .route(`${BASKET_URL}abandoned-items`)
+      .get(this.basketController.getAbandonedItemsInBasket);
   };
 }
 export default BasketRoute;

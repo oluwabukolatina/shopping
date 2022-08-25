@@ -56,10 +56,33 @@ class BasketController {
       const filter = parsed.filter(
         (value: { name: string }) => value.name !== params.name,
       );
+      const abandoned = parsed.filter(
+        (value: { name: string }) => value.name === params.name,
+      );
+      fs.writeFileSync('abandoned-items.json', JSON.stringify(abandoned));
       fs.writeFileSync('basket.json', JSON.stringify(filter));
       return ResponseHandler.CreatedResponse(
         response,
-        `${params.name} removed to basket`,
+        `${params.name} removed from basket`,
+      );
+    } catch (e) {
+      return next(e);
+    }
+  };
+
+  public getAbandonedItemsInBasket = async (
+    { params }: Request,
+    response: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      const content = fs.readFileSync('abandoned-items.json', 'utf8') || '[]';
+      const parsed = JSON.parse(content);
+      return ResponseHandler.SuccessResponse(
+        response,
+        StatusCodes.OK,
+        'get abandoned items in basket',
+        { abandonedItems: parsed },
       );
     } catch (e) {
       return next(e);
