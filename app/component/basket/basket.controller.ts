@@ -3,6 +3,7 @@ import fs from 'fs';
 import { StatusCodes } from 'http-status-codes';
 import ResponseHandler from '../../response-handler';
 import ProductData from '../../../products.json';
+import * as message from './basket.message';
 
 class BasketController {
   public addToBasket = async (
@@ -13,21 +14,23 @@ class BasketController {
     try {
       const content = fs.readFileSync('basket.json', 'utf8') || '[]';
       const parsed = JSON.parse(content);
-      const filter = ProductData.find((value) => value.name === body.name);
+      const filter = ProductData.find(
+        (value) => value.name === body.name.trim(),
+      );
       parsed.push(filter);
       const data = JSON.stringify(parsed);
       fs.writeFileSync('basket.json', data);
       return ResponseHandler.CreatedResponse(
         response,
-        `${body.name} added to basket`,
+        message.PRODUCT_ADDED_TO_BASKET_SUCCESSFULLY(body.name),
       );
     } catch (e) {
       return next(e);
     }
   };
 
-  public getAllInBasket = async (
-   request: Request,
+  public getBasket = async (
+    request: Request,
     response: Response,
     next: NextFunction,
   ) => {
@@ -37,7 +40,7 @@ class BasketController {
       return ResponseHandler.SuccessResponse(
         response,
         StatusCodes.OK,
-        'get basket',
+        message.BASKET_FETCHED,
         { basket: parsed },
       );
     } catch (e) {
@@ -61,9 +64,10 @@ class BasketController {
       );
       fs.writeFileSync('abandoned-items.json', JSON.stringify(abandoned));
       fs.writeFileSync('basket.json', JSON.stringify(filter));
-      return ResponseHandler.CreatedResponse(
+      return ResponseHandler.SuccessResponse(
         response,
-        `${params.name} removed from basket`,
+        StatusCodes.OK,
+        message.PRODUCT_REMOVED_FROM_BASKET(params.name),
       );
     } catch (e) {
       return next(e);
@@ -71,7 +75,7 @@ class BasketController {
   };
 
   public getAbandonedItemsInBasket = async (
-  request: Request,
+    request: Request,
     response: Response,
     next: NextFunction,
   ) => {
@@ -81,7 +85,7 @@ class BasketController {
       return ResponseHandler.SuccessResponse(
         response,
         StatusCodes.OK,
-        'get abandoned items in basket',
+        message.ABANDONED_ITEMS_FROM_BASKET_FETCHED,
         { abandonedItems: parsed },
       );
     } catch (e) {
