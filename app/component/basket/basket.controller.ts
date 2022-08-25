@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import fs from 'fs';
+import { StatusCodes } from 'http-status-codes';
 import ResponseHandler from '../../../response-handler';
 import ProductData from '../../../products.json';
-import { StatusCodes } from 'http-status-codes';
 
 class BasketController {
   public addToBasket = async (
@@ -12,11 +12,8 @@ class BasketController {
   ) => {
     try {
       const content = fs.readFileSync('basket.json', 'utf8') || '[]';
-      console.log(content, 'thec');
       const parsed = JSON.parse(content);
-      console.log(parsed, 'th pa');
       const filter = ProductData.find((value) => value.name === body.name);
-      console.log(filter, 'fil');
       parsed.push(filter);
       const data = JSON.stringify(parsed);
       fs.writeFileSync('basket.json', data);
@@ -28,6 +25,7 @@ class BasketController {
       return next(e);
     }
   };
+
   public getAllInBasket = async (
     { body }: Request,
     response: Response,
@@ -39,8 +37,29 @@ class BasketController {
       return ResponseHandler.SuccessResponse(
         response,
         StatusCodes.OK,
-        `get basket`,
+        'get basket',
         { basket: parsed },
+      );
+    } catch (e) {
+      return next(e);
+    }
+  };
+
+  public deleteFromBasket = async (
+    { params }: Request,
+    response: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      const content = fs.readFileSync('basket.json', 'utf8');
+      const parsed = JSON.parse(content);
+      const filter = parsed.filter(
+        (value: { name: string }) => value.name !== params.name,
+      );
+      fs.writeFileSync('basket.json', JSON.stringify(filter));
+      return ResponseHandler.CreatedResponse(
+        response,
+        `${params.name} removed to basket`,
       );
     } catch (e) {
       return next(e);

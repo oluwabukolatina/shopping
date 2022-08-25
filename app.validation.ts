@@ -29,5 +29,6 @@ const AppValidation = {
       );
     }
   },
+
 };
 export default AppValidation;
