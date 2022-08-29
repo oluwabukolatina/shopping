@@ -1,17 +1,6 @@
-# Technical assignment back-end engineer
+# Scope
 
-As part of an engineering team, you are working on an online shopping platform. The sales team wants to know which items were added to a basket, but removed before checkout. They will use this data later for targeted discounts.
-
-Using the agreed upon programming language, build a solution that solves the above problem.
-
-**Scope**
-
-* Focus on the JSON API, not on the look and feel of the application.
-
-**Timing**
-
-You have one week to accomplish the assignment. You decide yourself how much time and effort you invest in it, but one of our colleagues tends to say: "Make sure it is good" ;-). Please send us an email (jobs@madewithlove.com) when you think the assignment is ready for review. Please mention your name, Github username, and a link to what we need to review.
-
+this is an online shopping platform that helps the sales team/ or whatever team to know which items were added to a basket, but removed before checkout. They will use this data later for targeted discounts.
 
 # Submission
 **Description**
@@ -19,14 +8,8 @@ You have one week to accomplish the assignment. You decide yourself how much tim
 
 >  [Technologies](#technologies-used) &middot; [Testing Tools](#testing-tools) &middot; [Installations](#installations) &middot; [API Endpoints](#api-endpoints) &middot; [Tests](#tests) &middot; [Acknowledgments](#acknowledgments) &middot; [Author](#author)
 ---
-
-## Deployment
-
-Application is deployed on Heroku. Use URL [https://made-with-love-oluwabukolatina.herokuapp.com/](https://made-with-love-oluwabukolatina.herokuapp.com/) with API endpoints.
-
 ## POSTMAN API DOC
 Api documentation generated with [postman](https://documenter.getpostman.com/view/4223397/VUqyouBu)
-
 ---
 ## Technologies Used
 
@@ -47,7 +30,7 @@ Api documentation generated with [postman](https://documenter.getpostman.com/vie
 
 #### Clone
 
-- Clone this project to your local machine `https://github.com/madewithlove/technical-assignment-back-end-engineer-oluwabukolatina`
+- Clone this project to your local machine `https://github.com/oluwabukolatina/shopping`
 
 - Update example env file with your own details
 
@@ -63,7 +46,7 @@ Api documentation generated with [postman](https://documenter.getpostman.com/vie
   ```shell
   $ npm run dev
   ```
-- Use `http://localhost:${{PORT}}/api/v1/made-with-love` as base url for endpoints
+- Use `http://localhost:${{PORT}}/api/v1/shopping` as base url for endpoints
 
 
 ## API Endpoints

@@ -1,3 +1,3 @@
-const BASE_URL = '/api/v1/made-with-love/';
+const BASE_URL = '/shopping/';
 export const BASKET_URL = `${BASE_URL}basket/`;
 export const PRODUCT_URL = `${BASE_URL}product`;
